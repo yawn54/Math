@@ -64,7 +64,7 @@ color:rgb(0, 128, 0);}
       </div>
   <hr align="left">
     <form>
-    如何稱呼您呢?: <input type="text" id="name">
+    如何稱呼您呢: <input type="text" id="name">
     </form>
 <button type="button" onclick="myFunc()">確認</button>
   <script>
@@ -93,6 +93,15 @@ color:rgb(0, 128, 0);}
   <pre><i>日式百貨公司 濃濃的古早味</i></pre>
   <img src= "https://storage.googleapis.com/ay-image-upload/1493287969156_tainan_linbaihuo_ofelia.jpg" width= "512" height="256"/>
     <br>
+    <p id="content">最想去以下哪個景點呢?</p>
+<button type="button" onclick="content1()">十鼓文化園區</button>
+<button type="button" onclick="content2()">奇美博物館</button>
+<button type="button" onclick="content3()">藍晒圖文創園區</button>
+  <script>
+function content1(){document.getElementById("content").innerHTML="挖~!!這裡有很多刺激的體驗設施，不要嚇到尿褲子喔!!";}
+function content2(){document.getElementById("content").innerHTML="看來是個有藝術細胞的人呢~!!有時候會有特展可以留意官網消息喔!!";}
+function content3(){document.getElementById("content").innerHTML="這裡不只有文創商品喔!!逛累了對面就是新光三越可以吹個冷氣休息一下~!!";}
+  </script>
   <hr align="left">
   <a href="#景點">回到景點</a>
     <br>
