@@ -63,6 +63,13 @@ color:rgb(0, 128, 0);}
       <button type="button" onclick="document.getElementById('文化古都').style.display='block'">隱藏稱號</button>
       </div>
   <hr align="left">
+    <form>
+    如何稱呼您呢?: <input type="text" id="name">
+    </form>
+<button type="button" onclick="myFunc()">確認</button>
+  <script>
+  function myFunc(){alert("Hello, " + document.getElementById("name").value);}
+  </script>
   <a id="景點"> </a>
   <h2>景點</h2>
   <p title="台南市仁德區"><b>1.十鼓文化園區</b></p>
