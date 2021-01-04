@@ -56,8 +56,19 @@ color:rgb(0, 128, 0);}
     </div>
     <div id="header">
     <h1 style="font-family:DFKai-sb;color:rgb(51, 153, 102)"><big><b>台南</b></big></h1>
+  <form>
+    Please input one number (1-100): <input type="text" id="number">
+  </form>
+  <button type="button" onclick="eval()">Guess!</button>
   <script>
   alert("歡迎來到[台南]~!!");
+    var target=Math.floor((Math.random() * 100) + 1);
+    console.log(target);
+    function eval(){
+    if(document.getElementById("number").value > target){alert("猜小一些");}
+    else if (document.getElementById("number").value < target){alert("猜大一些");}
+    else{alert("Bingo!");}
+    }
   </script>
       <p id="文化古都"style="color:(50,155,50);display:none">文化古都</p>
       <button type="button" onclick="document.getElementById('文化古都').style.display='block'">隱藏稱號</button>
