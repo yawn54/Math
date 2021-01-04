@@ -6,6 +6,7 @@
 <meta name="keywords" content="旅遊">
 <meta name="author" content="楊尚瑨">
   <style>
+  #animate { width: 50px; height: 50px; position: absolute; background: red; }
      div.menu{
   position:fixed;
   background:#ebebeb;
@@ -44,6 +45,8 @@ color:rgb(0, 128, 0);}
   </style>
 </head>
 <body style="background-color:rgb(230, 255, 230)">
+<body onkeydown="eval(event)">
+<div id="animate"></div>
   <blockquote><blockquote><blockquote><blockquote><blockquote>
     <a id="台南"></a>
     <div class="menu">
@@ -69,7 +72,26 @@ color:rgb(0, 128, 0);}
     else if (document.getElementById("number").value < target){alert("猜大一些");}
     else{alert("Bingo!");}
     }
-   
+   function eval(event) {
+var elem = document.getElementById("animate");
+var x = elem.offsetLeft || 0;
+var y = elem.offsetTop || 0;
+var key = event.which || event.keyCode;
+switch(key){
+case 38:
+elem.style.top = (y-30) + 'px';
+break;
+case 40:
+elem.style.top = (y+30) + 'px';
+break;
+case 37:
+elem.style.left = (x-30) + 'px';
+break;
+case 39:
+elem.style.left = (x+30) + 'px';
+break;
+}
+}
   </script>
       <p id="文化古都"style="color:(50,155,50);display:none">文化古都</p>
       <button type="button" onclick="document.getElementById('文化古都').style.display='block'">又稱為</button>
