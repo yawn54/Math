@@ -7,13 +7,18 @@ cover}
 </style>
 <body onkeydown="eval(event)">
   <h1 style="color:rgb(179, 89, 0)">小火龍歷險記</h1>
-  <h2 id="demo" style="color:rgb(255, 153, 51)"></h2>
+  <h2 id="血量" style="color:rgb(255, 153, 51)"></h2>
+  <h2 id="傷害" style="color:rgb(255, 153, 51)"></h2>
 <div id="animate"></div>
 <script>
   function myFunction(num1, num2) {
   return num1 * num2;
   }
-  document.getElementById("demo").innerHTML ='血量:'+myFunction(100,1.0);
+  document.getElementById("血量").innerHTML ='血量:'+myFunction(100,1.0);
+    function myFunction(num3, num4) {
+  return num3 * num4;
+  }
+  document.getElementById("傷害").innerHTML ='傷害:'+myFunction(70,1.0);
 function eval(event) {
 var elem = document.getElementById("animate");
 var x = elem.offsetLeft || 0;
