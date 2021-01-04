@@ -6,8 +6,15 @@ body {background-image: url("https://www.nttu.edu.tw/var/file/0/1000/img/197/800
 cover}
 </style>
 <body onkeydown="eval(event)">
+  <h1>小火龍歷險記</h1>
+  <h2>血量:</h2>
+  <p id='demo'></p>
 <div id="animate"></div>
 <script>
+  function myFunction(num1, num2) {
+  return num1 * num2;
+  }
+  document.getElementById("demo").innerHTML = myFunction(4, 3);
 function eval(event) {
 var elem = document.getElementById("animate");
 var x = elem.offsetLeft || 0;
@@ -26,4 +33,6 @@ break;
 case 39:
 elem.style.left = (x+30) + 'px';
 break;
-}}</script></body></html>
+}}</script>
+  </body>
+</html>
