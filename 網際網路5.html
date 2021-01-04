@@ -6,14 +6,14 @@ body {background-image: url("https://www.nttu.edu.tw/var/file/0/1000/img/197/800
 cover}
 </style>
 <body onkeydown="eval(event)">
-  <h1 aling='right'>小火龍歷險記</h1>
-  <p id='demo';aling='right'>血量:</p>
+  <h1 aling="right">小火龍歷險記</h1>
+  <p id="demo";aling="right"></p>
 <div id="animate"></div>
 <script>
   function myFunction(num1, num2) {
   return num1 * num2;
   }
-  document.getElementById("demo").innerHTML = myFunction(4, 3);
+  document.getElementById("demo").innerHTML =alert('血量:'+myFunction(4, 3));
 function eval(event) {
 var elem = document.getElementById("animate");
 var x = elem.offsetLeft || 0;
