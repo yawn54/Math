@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<style>
+#animate { width: 50px; height: 50px; position: absolute; background: red; }
+</style>
+<body onkeydown="eval(event)">
+<div id="animate"></div>
+<script>
+function eval(event) {
+var elem = document.getElementById("animate");
+var x = elem.offsetLeft || 0;
+var y = elem.offsetTop || 0;
+var key = event.which || event.keyCode;
+switch(key){
+case 38:
+elem.style.top = (y-30) + 'px';
+break;
+case 40:
+elem.style.top = (y+30) + 'px';
+break;
+case 37:
+elem.style.left = (x-30) + 'px';
+break;
+case 39:
+elem.style.left = (x+30) + 'px';
+break;
+}
+}
+</script></body></html>
