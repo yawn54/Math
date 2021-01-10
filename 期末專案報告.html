@@ -35,7 +35,7 @@
         function Snake(){
             var len=20;
             this.redirect="right";
-            this.snakebody=[[0,1,'green',null],[1,1,'rgb(0, 204, 102)',null],[2,1,'rgb(0, 204, 102)',null],[3,1,'rgb(102, 255, 153)',null]];
+            this.snakebody=[[0,1,'rgb(0, 204, 102)',null],[1,1,'rgb(0, 204, 102)',null],[2,1,'rgb(0, 204, 102)',null],[3,1,'rgb(102, 255, 153)',null]];
             this.showsnake=function(){
                 for (var i=0;i<this.snakebody.length;i++){
                     if(this.snakebody[i][3]===null){
@@ -51,16 +51,16 @@
             }
             this.movesnake = function () {
                 for (var i = 0; i < this.snakebody.length - 1; i++) {
-                    this.snakebody[i][0] = this.snakebody[i + 1][0];
-                    this.snakebody[i][1] = this.snakebody[i + 1][1];
+                    this.snakebody[i][0] = this.snakebody[i+1][0];
+                    this.snakebody[i][1] = this.snakebody[i+1][1];
                 }
-                if (this.redirect == "right") {
-                    this.snakebody[this.snakebody.length - 1][0] += 1;
+                if (this.redirect=="right") {
+                    this.snakebody[this.snakebody.length-1][0] += 1;
                 }
-                if (this.redirect == "left") {
-                    this.snakebody[this.snakebody.length - 1][0] -= 1;
+                if (this.redirect=="left") {
+                    this.snakebody[this.snakebody.length-1][0]-=1;
                 }
-                if (this.redirect == "up") {
+                if (this.redirect=="up"){
                     this.snakebody[this.snakebody.length - 1][1] -= 1;
                 }
                 if (this.redirect == "down") {
