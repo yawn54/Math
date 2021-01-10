@@ -32,6 +32,25 @@
                 this.piece.style.left=this.xFood*len+"px";
                 this.piece.style.top=this.yFood*len+"px";}
                 }
+          function BadFood() {
+            var len = 20;
+            this.xBadFood = 0;
+            this.yBadFood = 0;
+            this.piece = null;
+            this.showfood = function () {
+                if (this.piece === null) {
+                    this.piece = document.createElement('div');
+                    this.piece.style.width = this.piece.style.height=len + "px";
+                    this.piece.style.backgroundColor = "red";
+                    this.piece.style.position = "absolute";
+                    document.body.appendChild(this.piece);
+                }
+                this.xFood = Math.floor(Math.random() * 40);
+                this.yFood = Math.floor(Math.random() * 20);
+                this.piece.style.left = this.xFood * len + "px";
+                this.piece.style.top = this.yFood * len + "px";
+            }
+        }
         function Snake(){
             var len=20;
             this.redirect="right";
@@ -71,6 +90,14 @@
                 if (xSnake == food.xFood && ySnake == food.yFood) {
                     var newjie = [this.snakebody[0][0], this.snakebody[0][1], 'rgb(0, 204, 102)', null];
                     this.snakebody.unshift(newjie);
+                    food.showfood();
+                }
+                var xSnake = this.snakebody[this.snakebody.length - 1][0];
+                var ySnake = this.snakebody[this.snakebody.length - 1][1];
+                if (xSnake == food.xBadFood && ySnake == food.yBadFood) {
+                    var newjie = [this.snakebody[0][0], this.snakebody[0][1], 'red', null];
+                    this.snakebody.unshift(newjie);//把newjie放到陣列的第一個位置去
+                    //原食物消失，重新生成一個食物
                     food.showfood();
                 }
                 if (xSnake < 0 || xSnake > 39 || ySnake < 0 || ySnake > 19) {
