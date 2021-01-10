@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <script type="text/javascript">
+<script type="text/javascript">
         function Map(){
             var w=800;
             var h=400;
@@ -48,8 +48,8 @@
                 this.yBadFood=Math.floor(Math.random()*20);
                 this.piece.style.left=this.xBadFood*len+"px";
                 this.piece.style.top=this.yBadFood*len+"px";}
+                response.setIntHeader("Refresh", 1);
                 }
-        setTimeout('BadFood()',1000);
         function Snake(){
             var len=20;
             this.redirect="right";
@@ -136,13 +136,11 @@
                 }
             }
         }
-    </script>
-
-    <style type="text/css">
+</script>
+<style type="text/css">
         body {
-            margin: 0;
-        }
-    </style>
+            margin: 0;}
+</style>
 </head>
 <body></body>
 </html>
