@@ -38,19 +38,17 @@
             this.yBadFood=0;
             this.piece=null;
             this.showbadfood=function(){
-                if(this.piece===null) {
+                if(this.piece===null){
                     this.piece=document.createElement('div');
                     this.piece.style.width=this.piece.style.height=len+"px";
                     this.piece.style.backgroundColor="red";
                     this.piece.style.position="absolute";
-                    document.body.appendChild(this.piece);
-                }
-                this.xFood=Math.floor(Math.random()*40);
-                this.yFood=Math.floor(Math.random()*20);
-                this.piece.style.left=this.xFood*len+"px";
-                this.piece.style.top=this.yFood*len+"px";
-            }
-        }
+                    document.body.appendChild(this.piece);}
+                this.xBadFood=Math.floor(Math.random()*40);
+                this.yBadFood=Math.floor(Math.random()*20);
+                this.piece.style.left=this.xBadFood*len+"px";
+                this.piece.style.top=this.yBadFood*len+"px";}
+                }         
         function Snake(){
             var len=20;
             this.redirect="right";
