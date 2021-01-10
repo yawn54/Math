@@ -32,23 +32,23 @@
                 this.piece.style.left=this.xFood*len+"px";
                 this.piece.style.top=this.yFood*len+"px";}
                 }
-          function BadFood() {
-            var len = 20;
-            this.xBadFood = 0;
-            this.yBadFood = 0;
-            this.piece = null;
-            this.showfood = function () {
-                if (this.piece === null) {
-                    this.piece = document.createElement('div');
-                    this.piece.style.width = this.piece.style.height=len + "px";
-                    this.piece.style.backgroundColor = "red";
-                    this.piece.style.position = "absolute";
+          function BadFood(){
+            var len=20;
+            this.xBadFood=0;
+            this.yBadFood=0;
+            this.piece=null;
+            this.showbadfood=function(){
+                if(this.piece===null) {
+                    this.piece=document.createElement('div');
+                    this.piece.style.width=this.piece.style.height=len+"px";
+                    this.piece.style.backgroundColor="red";
+                    this.piece.style.position="absolute";
                     document.body.appendChild(this.piece);
                 }
-                this.xFood = Math.floor(Math.random() * 40);
-                this.yFood = Math.floor(Math.random() * 20);
-                this.piece.style.left = this.xFood * len + "px";
-                this.piece.style.top = this.yFood * len + "px";
+                this.xFood=Math.floor(Math.random()*40);
+                this.yFood=Math.floor(Math.random()*20);
+                this.piece.style.left=this.xFood*len+"px";
+                this.piece.style.top=this.yFood*len+"px";
             }
         }
         function Snake(){
