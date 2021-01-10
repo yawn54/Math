@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
+    <body onload="setInterval(BadFood, 1000);">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
@@ -48,7 +49,6 @@
                 this.yBadFood=Math.floor(Math.random()*20);
                 this.piece.style.left=this.xBadFood*len+"px";
                 this.piece.style.top=this.yBadFood*len+"px";}
-                response.setIntHeader("Refresh", 1);
                 }
         function Snake(){
             var len=20;
@@ -142,5 +142,6 @@
             margin: 0;}
 </style>
 </head>
-<body></body>
+<body>
+</body>
 </html>
