@@ -90,7 +90,8 @@
                     this.snakebody.unshift(newjie);
                     food.showfood();}
                 if (xSnake==badfood.xBadFood && ySnake==badfood.yBadFood){
-                    alert('吃到毒藥了!')
+                    alert('吃到毒藥了!');
+                    clearInterval(mytime);
                     return false;
                 }
                 if (xSnake < 0 || xSnake > 39 || ySnake < 0 || ySnake > 19) {
