@@ -74,13 +74,13 @@
                     food.showfood();
                 }
                 if (xSnake < 0 || xSnake > 39 || ySnake < 0 || ySnake > 19) {
-                    alert('game over');
+                    alert('出界囉!!');
                     clearInterval(mytime);
                     return false;
                 }
                 for (var k = 0; k < this.snakebody.length - 1; k++) {
                     if (this.snakebody[k][0] == xSnake && this.snakebody[k][1] == ySnake) {
-                        alert('game over kill you by yourself');
+                        alert('吃到自己了!!');
                         clearInterval(mytime);
                         return false;
                     }
