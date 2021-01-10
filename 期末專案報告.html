@@ -15,6 +15,23 @@
                 tu.style.backgroundImage="url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-wonyM9ifSoZVGHaVcX41VpRB2_BiC0ELzw&usqp=CAU)";
                 document.body.appendChild(tu);}
                        }
+         function Food(){
+            var len=20;
+            this.xFood=0;
+            this.yFood=0;
+            this.piece=null;
+            this.showfood=function(){
+                if(this.piece===null){
+                    this.piece=document.createElement('div');
+                    this.piece.style.width = this.piece.style.height=len+"px";
+                    this.piece.style.backgroundColor="green";
+                    this.piece.style.position="absolute";
+                    document.body.appendChild(this.piece);}
+                this.xFood=Math.floor(Math.random()*40);
+                this.yFood=Math.floor(Math.random()*20);
+                this.piece.style.left=this.xFood*len+"px";
+                this.piece.style.top=this.yFood*len+"px";}
+                }
           function BadFood(){
             var len=20;
             this.xBadFood=0;
@@ -99,6 +116,8 @@
             map.showmap();
             food = new Food();
             food.showfood();
+            badfood=new BadFood();
+            badfood.showbadfood();
             snake = new Snake();
             snake.showsnake();
             mytime = setInterval("snake.movesnake()", 200)
