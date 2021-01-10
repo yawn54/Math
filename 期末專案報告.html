@@ -88,11 +88,8 @@
                 if (xSnake == food.xFood && ySnake == food.yFood) {
                     var newjie = [this.snakebody[0][0], this.snakebody[0][1], 'rgb(0, 204, 102)', null];
                     this.snakebody.unshift(newjie);
-                    food.showfood();
-                }
-                var xSnake = this.snakebody[this.snakebody.length - 1][0];
-                var ySnake = this.snakebody[this.snakebody.length - 1][1];
-                if (xSnake == food.xBadFood && ySnake == food.yBadFood) {
+                    food.showfood();}
+                if (xSnake==badfood.xBadFood && ySnake==badfood.yBadFood){
                     alert('吃到毒藥了!')
                     return false;
                 }
