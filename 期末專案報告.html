@@ -116,9 +116,10 @@
             food.showfood();
             badfood=new BadFood();
             badfood.showbadfood();
+            mytime = setInterval("BadFood.showbadfood()", 2000)
             snake = new Snake();
             snake.showsnake();
-            mytime = setInterval("snake.movesnake()", 200,BadFood)
+            mytime = setInterval("snake.movesnake()", 200)
             document.onkeydown = function (evt) {
                 var num = evt.keyCode;
                 if (num == 38) {
