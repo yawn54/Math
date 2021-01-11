@@ -32,7 +32,6 @@
                 this.piece.style.left=this.xFood*len+"px";
                 this.piece.style.top=this.yFood*len+"px";}
                 }
-          setInterval(BadFood, 3000);
           function BadFood(){
             var len=20;
             this.xBadFood=0;
@@ -119,7 +118,7 @@
             badfood.showbadfood();
             snake = new Snake();
             snake.showsnake();
-            mytime = setInterval("snake.movesnake()", 200)
+            mytime = setInterval("snake.movesnake()", 200,BadFood)
             document.onkeydown = function (evt) {
                 var num = evt.keyCode;
                 if (num == 38) {
